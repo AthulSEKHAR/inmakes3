@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>project app</title>
+</head>
+<body>
+<h1>Register your name</h1>
+<form action="register" method="post" >
+    {% csrf_token %}
+
+     <input type="text" name="User name" placeholder="enter your user name"><br>
+    <input type="text" name="First_name" placeholder="enter your first name"><br>
+    <input type="text" name="Second_name" placeholder="enter your last name"><br>
+    <input type="email" name="Email" placeholder="enter your email"><br>
+<!--    <input type="number" name="Mobile" placeholder="enter your phone number"><br>-->
+    <input type="password" name="Password" placeholder="enter your password"><br>
+    <input type="password" name="Password1" placeholder="confirm password"><br>
+    <input type="submit">
+
+</form>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+
+
+
+</body>
+</html>
